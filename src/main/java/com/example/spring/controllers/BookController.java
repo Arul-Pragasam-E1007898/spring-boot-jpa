@@ -1,7 +1,6 @@
 package com.example.spring.controllers;
 
 import com.example.spring.entities.Book;
-import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -37,7 +36,6 @@ public class BookController {
 
     // Update an existing book
     @PutMapping("/{id}")
-    @Transactional
     public Book updateBook(@PathVariable Long id, @RequestBody Book updatedBook) {
         // You may want to handle cases where the book is not found
         return  bookService.saveBook(updatedBook);
