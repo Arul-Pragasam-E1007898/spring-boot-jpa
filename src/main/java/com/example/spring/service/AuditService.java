@@ -1,7 +1,7 @@
-package com.example.spring.controllers;
+package com.example.spring.service;
 
 import com.example.spring.entities.Audit;
-import com.example.spring.entities.AuditRepository;
+import com.example.spring.repository.AuditRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

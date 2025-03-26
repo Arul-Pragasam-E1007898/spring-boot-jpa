@@ -1,9 +1,9 @@
-package com.example.spring.controllers;
+package com.example.spring.service;
 
 import com.example.spring.entities.Audit;
-import com.example.spring.entities.AuditRepository;
+import com.example.spring.repository.AuditRepository;
 import com.example.spring.entities.Book;
-import com.example.spring.entities.BookRepository;
+import com.example.spring.repository.BookRepository;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +34,7 @@ public class BookService {
     public Book saveBook(Book book) {
         Book updatedBook = bookRepository.save(book);
         privateMethod();
-        throw new RuntimeException("Err");
+        return updatedBook;
     }
 
     private void privateMethod() {

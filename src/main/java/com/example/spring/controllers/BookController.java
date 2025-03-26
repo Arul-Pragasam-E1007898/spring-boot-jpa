@@ -1,6 +1,7 @@
 package com.example.spring.controllers;
 
 import com.example.spring.entities.Book;
+import com.example.spring.service.BookService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
